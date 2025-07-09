@@ -1,9 +1,23 @@
 {% extends "layout.html" %}
 
 {% block title %}
-Home Page
+Home | Chai or Code
 {% endblock %}
 
 {% block content %}
-    <h1 class="bg-orange-500 text-3xl p-4 rounded-lg">Chai or Code || Home Page</h1>
+
+<div class="max-w-4xl mx-auto text-center py-12">
+    <h1 class="text-4xl font-bold text-orange-600 mb-4">
+        ☕ Welcome to Chai or Code
+    </h1>
+    <p class="text-lg text-gray-700 mb-6">
+        Explore a world where technology meets tradition. Browse chai varieties, read reviews, find stores, and dive into a flavorful journey of code and chai!
+    </p>
+    <a href="{% url 'all_chai' %}">
+        <button class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition">
+            Browse Chai Collection
+        </button>
+    </a>
+</div>
+
 {% endblock %}

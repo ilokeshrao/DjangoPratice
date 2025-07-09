@@ -1,16 +1,28 @@
 {% extends "layout.html" %}
 
-{% block title %}Chai details Page{% endblock %}
+{% block title %}Chai Details{% endblock %}
 
 {% block content %}
 
+<div class="max-w-2xl mx-auto bg-white shadow-md rounded-lg overflow-hidden mt-6">
+    <div class="p-6">
+        <h2 class="text-3xl font-bold text-orange-700 mb-4">{{ chai.name }}</h2>
+        <img src="{{ chai.image.url }}" alt="{{ chai.name }}" class="w-full h-64 object-contain bg-gray-100 mb-4 rounded">
+        <p class="text-gray-800 text-lg mb-4">
+            {{ chai.desc }}
+        </p>
+        <p class="text-sm text-gray-600 mb-6">
+            Type: <span class="font-medium">{{ chai.get_type_display }}</span>
+        </p>
 
-    <h1>Chai or Code || jai shree ram detals page </h1>
+        <div class="flex justify-end">
+            <a href="{% url 'all_chai' %}">
+                <button class="bg-gray-700 hover:bg-gray-900 text-white px-5 py-2 rounded-md transition">
+                    ⬅️ Back to All Chai
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
 
-   <h3>{{chai.name}}</h3>
-   <h3>{{chai.desc}}</h3>
-
-        
-        {% endblock %}
-    
-
+{% endblock %}

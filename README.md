@@ -1,5 +1,23 @@
 # DjangoPratice
 
+python -m venv .venv
+source  .venv/bin/activate
+pip install django 
+pip freeze  >requirements.txt
+django-admin  startproject projectname
+cd ..project name
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+
+// manage image 
+// setting 
+import os 
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+
 🫖 Chai or Code — Django + Tailwind Project
 A simple Django web app demonstrating a Chai (tea) variety catalog built using Django, Tailwind CSS, and SQLite. This app showcases the power of full-stack development using Python and modern frontend styling.
 

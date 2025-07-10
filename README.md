@@ -18,6 +18,8 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 
+
+
 🫖 Chai or Code — Django + Tailwind Project
 A simple Django web app demonstrating a Chai (tea) variety catalog built using Django, Tailwind CSS, and SQLite. This app showcases the power of full-stack development using Python and modern frontend styling.
 

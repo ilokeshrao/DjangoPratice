@@ -17,7 +17,40 @@ import os
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
 
+//  static urls links in urls.py
+from django.contrib import admin
+from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+// app create krne ke leye 
+pythone manage.py startapp tweet
+
+sbsbe phloe urls.py file bna lege 
+
+views.py me file bna lege 
+
+setting ko btyege new aap tweet leye
+
+// templates ke leye 
+   'DIRS': [os.path.join(BASE_DIR,'templates')],
+
+// tweet me templates ka folder bna lege 
+usme index.html 
+
+urls.py main project ko inform krge app ke leye 
+from django.urls import path ,include
+ path('tweet/', include('tweet.urls')),
+
+// models ke leye //
+from django.contrib.auth.models import user
 
 
 🫖 Chai or Code — Django + Tailwind Project

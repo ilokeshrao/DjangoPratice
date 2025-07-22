@@ -11,7 +11,7 @@ python manage.py migrate
 python manage.py createsuperuser
 
 // manage image 
-// setting 
+// setting
 import os
 
 MEDIA_URL = '/media/'
